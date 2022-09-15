@@ -1,0 +1,34 @@
+capital = 5
+
+oob = "standard_templates"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 20
+
+set_politics = {
+	ruling_party = communism
+	last_election = "2013.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 5
+	fascism = 5
+	communism = 85
+	neutrality = 5
+}
+
+create_country_leader = {
+	name = "Xi Jinping"
+	desc = ""
+	picture = "gfx/leaders/CHN/CHN_Xi_Jinping.dds"
+	expire = "2066.1.1"
+	ideology = marxism
+	traits = {
+		#
+	}
+}

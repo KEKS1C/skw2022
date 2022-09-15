@@ -1,0 +1,16 @@
+state={
+	id=63
+	name="STATE_63"
+	provinces={
+		903 3189 3278 5521 6478 7352 10220 10238 10249 10251 10269 10276 10314 
+	}
+    
+    history={
+		owner = RUS
+		add_core_of = RUS
+	}
+    
+	manpower=1
+	state_category=town
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,17 @@
+
+state={
+	id=50
+	name="STATE_50"
+	provinces={
+		824 1204 2517 2716 3297 3732 4483 6780 7156 7830 7921 8040 8800 8948 9822 9823 9824 9859 9865 9868 9869 9878 9924 9952 
+	}
+    
+    history={
+		owner = RUS
+		add_core_of = RUS
+	}
+    
+	manpower=1
+	state_category=town
+	buildings_max_level_factor=1.000
+}

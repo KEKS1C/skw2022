@@ -1,0 +1,16 @@
+state={
+	id=56
+	name="STATE_56"
+	provinces={
+		1235 4477 5342 5436 5674 7857 8923 9297 13992 14047 14062 14074 14079 14095 14102 
+	}
+    
+    history={
+		owner = ROK
+		add_core_of = ROK
+	}  
+    
+	manpower=1
+	state_category=town
+	buildings_max_level_factor=1.000
+}

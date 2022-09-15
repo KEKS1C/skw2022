@@ -1,0 +1,34 @@
+capital = 32
+
+oob = "standard_templates"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+}
+
+set_convoys = 20
+
+set_politics = {
+	ruling_party = communism
+	last_election = "2012.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 2
+	fascism = 7
+	communism = 90
+	neutrality = 1
+}
+
+create_country_leader = {
+	name = "Kim Jong-un"
+	desc = ""
+	picture = "gfx/leaders/WPK/WPK_Kim_Jong-un.dds"
+	expire = "2066.1.1"
+	ideology = stalinism
+	traits = {
+		#
+	}
+}

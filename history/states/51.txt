@@ -1,0 +1,17 @@
+
+state={
+	id=51
+	name="STATE_51"
+	provinces={
+		1015 1163 1992 3403 3574 5204 5215 5756 6212 6988 9977 9997 10026 10030 10077 10109 10125 10143 10146 10177 15509 15510 
+	}
+    
+    history={
+		owner = RUS
+		add_core_of = RUS
+	}
+    
+	manpower=1
+	state_category=town
+	buildings_max_level_factor=1.000
+}

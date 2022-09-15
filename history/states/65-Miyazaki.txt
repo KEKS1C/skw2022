@@ -1,0 +1,16 @@
+state={
+	id=65
+	name="STATE_65"
+	provinces={
+		1167 2126 4790 4795 5633 7505 8325 8916 15495 15501 15503 15507 
+	}
+    
+    history={
+		owner = JPN
+		add_core_of = JPN
+	}
+    
+	manpower=1
+	state_category=town
+	buildings_max_level_factor=1.000
+}
