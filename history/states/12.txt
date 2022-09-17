@@ -8,10 +8,17 @@ state={
     
     history={
 		owner = ROK
+		victory_points = { 15303 15 }
 		add_core_of = ROK
+		buildings = {
+			infrastructure = 6
+			15303 = {
+				naval_base=4
+			}
+		}
 	}  
     
-	manpower=1
+	manpower=531905
 	buildings_max_level_factor=1.000
 	state_category=town
 }

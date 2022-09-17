@@ -8,10 +8,11 @@ state={
     
     history={
 		owner = ROK
+		victory_points = { 2421 3 }
 		add_core_of = ROK
 	}  
     
-	manpower=1
+	manpower=2600032
 	state_category=town
 	buildings_max_level_factor=1.000
 }
