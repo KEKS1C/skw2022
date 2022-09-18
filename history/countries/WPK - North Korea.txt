@@ -32,3 +32,6 @@ create_country_leader = {
 		#
 	}
 }
+add_ideas = {
+	war_on_the_horizon_WPK
+}
