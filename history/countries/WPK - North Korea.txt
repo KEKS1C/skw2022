@@ -33,5 +33,9 @@ create_country_leader = {
 	}
 }
 add_ideas = {
+	war_economy
+	closed_economy
+	service_by_requirement
 	war_on_the_horizon_WPK
+	WPK_total_economic_sanctions
 }

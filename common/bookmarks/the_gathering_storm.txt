@@ -11,6 +11,7 @@ bookmarks = {
 			history = "OTHER_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
+			war_on_the_horizon_ROK
 			}
 			focuses = {
 			
@@ -19,8 +20,10 @@ bookmarks = {
         
         "WPK"={
 			history = "OTHER_GATHERING_STORM_DESC"
-			ideology = democratic
+			ideology = communism
 			ideas = {
+			war_on_the_horizon_WPK
+			WPK_total_economic_sanctions
 			}
 			focuses = {
 			
@@ -29,7 +32,7 @@ bookmarks = {
         
         "RUS"={
 			history = "OTHER_GATHERING_STORM_DESC"
-			ideology = democratic
+			ideology = neutrality
 			ideas = {
 			}
 			focuses = {
@@ -39,7 +42,7 @@ bookmarks = {
         
         "CHN"={
 			history = "OTHER_GATHERING_STORM_DESC"
-			ideology = democratic
+			ideology = communism
 			ideas = {
 			}
 			focuses = {

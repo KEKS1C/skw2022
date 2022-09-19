@@ -32,3 +32,9 @@ create_country_leader = {
 		#
 	}
 }
+
+add_ideas = {
+	civilian_economy
+	free_trade
+	volunteer_only
+}

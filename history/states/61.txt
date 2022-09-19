@@ -7,11 +7,15 @@ state={
 	}
     
     history={
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 2
+			}
 		owner = ROK
 		add_core_of = ROK
 	}  
     
 	manpower=3414950
-	state_category=town
+	state_category=city
 	buildings_max_level_factor=1.000
 }

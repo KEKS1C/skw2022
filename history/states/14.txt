@@ -7,11 +7,14 @@ state={
 	}
     
     history={
+		buildings = {
+			infrastructure = 4
+			}
 		owner = JPN
 		add_core_of = JPN
 	}
     
 	manpower=31756
-	state_category=town
+	state_category=rural
 	buildings_max_level_factor=1.000
 }

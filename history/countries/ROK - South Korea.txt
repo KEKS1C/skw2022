@@ -33,5 +33,8 @@ create_country_leader = {
 	}
 }
 add_ideas = {
+	civilian_economy
+	free_trade
+	extensive_conscription
 	war_on_the_horizon_ROK
 }

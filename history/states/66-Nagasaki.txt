@@ -7,11 +7,16 @@ state={
 	}
     
     history={
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 4
+			dockyard = 1
+		}
 		owner = JPN
 		add_core_of = JPN
 	}
     
 	manpower=1387171
-	state_category=town
+	state_category=city
 	buildings_max_level_factor=1.000
 }

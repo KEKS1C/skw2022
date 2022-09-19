@@ -12,6 +12,7 @@ state={
 		add_core_of = ROK
 		buildings = {
 			infrastructure = 6
+			industrial_complex = 1
 			15303 = {
 				naval_base=4
 			}

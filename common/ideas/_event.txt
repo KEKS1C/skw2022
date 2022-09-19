@@ -9,12 +9,26 @@ ideas = {
 			}
 			removal_cost = -1
 			
-			picture = GFX_idea_generic_disjointed_gov
+			picture = anti_soviet_pact
 			
 			modifier = {
 				stability_weekly = -0.025
 				political_power_factor = -0.1
 				war_support_weekly = 0.05
+			}
+		}
+		
+		WPK_total_economic_sanctions = {
+			
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = trade
+			
+			modifier = {
+				min_export = -0.5
 			}
 		}
 		
@@ -25,7 +39,7 @@ ideas = {
 			}
 			removal_cost = -1
 			
-			picture = GFX_idea_generic_disjointed_gov
+			picture = anti_soviet_pact
 			
 			modifier = {
 				stability_weekly = -0.075

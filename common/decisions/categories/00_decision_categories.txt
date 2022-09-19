@@ -29,7 +29,7 @@ MTG_naval_treaties = {
 skw_war_start = {
 	picture = GFX_decision_category_military_operation
 	allowed = {
-		OR = (
+		OR = {
 			tag = ROK
 			tag = WPK
 		}
@@ -37,6 +37,27 @@ skw_war_start = {
 	visible = {
 		has_war = no
 	}
+}
+integration_of_the_north = {
+	picture = GFX_decision_cat_generic_korea
+	allowed = {
+		tag = ROK
+	}
+	visible = {
+		any_controlled_state = {
+			is_core_of = WPK
+			NOT = { is_core_of = ROOT }
+		}
+	}
+	on_map_area = {
+		name = KOR_reintegration
+		zoom = 100
+		
+		target_root_trigger = {
+			always = yes
+		}
+	}
+	visible_when_empty = yes
 }
 SAF_anti_colonialist_crusade = {
 	allowed = {

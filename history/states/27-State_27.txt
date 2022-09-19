@@ -11,6 +11,11 @@ state={
 	}
     
     history={
+		buildings = {
+			infrastructure = 6
+			arms_factory = 1
+			industrial_complex = 2
+		}
 		owner = WPK
 		add_core_of = WPK
 	}    

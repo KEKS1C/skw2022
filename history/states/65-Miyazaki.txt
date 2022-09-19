@@ -6,6 +6,9 @@ state={
 	}
     
     history={
+		buildings = {
+			infrastructure = 4
+			}
 		owner = JPN
 		add_core_of = JPN
 	}

@@ -11,13 +11,11 @@ state={
 		add_core_of = WPK
 		buildings = {
 			infrastructure = 6
-			15303 = {
-				
-			}
+			arms_factory = 2
 		}
 	}  
     
 	manpower=1477582
-	state_category=town
+	state_category=rural
 	buildings_max_level_factor=1.000
 }

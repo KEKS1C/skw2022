@@ -9,6 +9,10 @@ state={
 	buildings_max_level_factor=1.000
     
     history={
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+		}
 		owner = JPN
 		add_core_of = JPN
 	}

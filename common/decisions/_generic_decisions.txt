@@ -219,8 +219,8 @@ skw_war_start = {
 						}
 					}
 				}
-				remove_ideas = war_on_the_horizon_WPK
 			}
+			remove_ideas = war_on_the_horizon_WPK
 		}
 	}
 	war_start_ROK = {
@@ -270,6 +270,283 @@ skw_war_start = {
 				}
 			}
 			remove_ideas = war_on_the_horizon_ROK
+		}
+	}
+}
+integration_of_the_north = {
+	reinforce_garrison = {
+
+        state_target = yes
+		on_map_mode = map_and_decisions_view  
+        target_trigger = {
+            FROM = {
+				is_controlled_by = ROOT
+				is_core_of = WPK
+				NOT = { is_core_of = ROOT }
+            }
+        }
+		priority = 50
+
+		icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 1
+				has_political_power > 50
+			}
+			modifier = {
+				factor = 10
+				has_political_power > 250
+			}
+			modifier = {
+				factor = 10
+				has_political_power > 400
+			}
+		}
+
+		available = {
+			has_manpower > 10000	
+		}
+
+		days_remove = 30
+
+		days_re_enable = 60
+		
+		cancel_trigger = {
+			FROM = {
+				NOT = { is_owned_by = ROOT }
+			}	
+		}
+
+		cost = 50
+
+		complete_effect = {
+			add_manpower = -2000
+		}
+
+		modifier = {
+			weekly_manpower = -2000
+		}
+
+		remove_effect = {
+			FROM = {
+				add_compliance = 10
+				add_resistance = -10
+			}	
+		}
+	}
+	carry_out_anti_guerrilla_operation = {
+
+        state_target = yes
+		on_map_mode = map_and_decisions_view  
+        target_trigger = {
+            FROM = {
+				is_controlled_by = ROOT
+				is_core_of = WPK
+				NOT = { is_core_of = ROOT }
+            }
+        }
+		priority = 50
+
+		icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 1
+				command_power > 40
+			}
+			modifier = {
+				factor = 10
+				command_power > 60
+			}
+			modifier = {
+				factor = 10
+				command_power > 100
+			}
+		}
+
+		available = {
+			command_power > 30
+			has_manpower > 1000
+		}
+
+		days_remove = 50
+
+		days_re_enable = 70
+		
+		cancel_trigger = {
+			FROM = {
+				NOT = { is_owned_by = ROOT }
+			}	
+		}
+
+		custom_cost_trigger = {
+			command_power > 29
+		}
+		
+		custom_cost_text = KOR_decision_cost
+
+		complete_effect = {
+			add_command_power = -30
+		}
+
+		modifier = {
+			FROM = {
+				resistance_target = -0.2
+			}
+		}
+
+		remove_effect = {
+			FROM = {
+				add_compliance = -5
+				add_resistance = -25
+			}
+			random_list = {
+				10 = {
+					add_manpower = -50
+				}
+				15 = {
+					add_manpower = -150
+				}
+				25 = {
+					add_manpower = -300
+				}
+				15 = {
+					add_manpower = -500
+				}
+				10 = {
+					add_manpower = -750
+				}
+			}
+			army_experience = 10
+		}
+	}
+	start_pro_democracy_campaign = {
+
+        state_target = yes
+		on_map_mode = map_and_decisions_view  
+        target_trigger = {
+            FROM = {
+				is_controlled_by = ROOT
+				is_core_of = WPK
+				NOT = { is_core_of = ROOT }
+            }
+        }
+		priority = 50
+
+		icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 1
+				has_political_power > 50
+			}
+			modifier = {
+				factor = 10
+				has_political_power > 250
+			}
+			modifier = {
+				factor = 10
+				has_political_power > 400
+			}
+		}
+
+		available = {
+			FROM = {
+				resistance < 30
+			}	
+		}
+
+		days_remove = 60
+
+		days_re_enable = 90
+		
+		cancel_trigger = {
+			FROM = {
+				NOT = { is_owned_by = ROOT }
+			}	
+		}
+
+		cost = 75
+
+		complete_effect = {
+		}
+
+		modifier = {
+			communism_drift = -0.01
+		}
+
+		remove_effect = {
+			FROM = {
+				add_compliance = 20
+				add_resistance = -5
+			}
+		}
+	}
+	integrate_the_state = {
+
+        state_target = yes
+		on_map_mode = map_and_decisions_view  
+        target_trigger = {
+            FROM = {
+				is_controlled_by = ROOT
+				is_core_of = WPK
+				NOT = { is_core_of = ROOT }
+            }
+        }
+		priority = 50
+
+		icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 1
+				has_political_power > 75
+			}
+			modifier = {
+				factor = 10
+				has_political_power > 350
+			}
+			modifier = {
+				factor = 10
+				has_political_power > 500
+			}
+		}
+
+		available = {
+			FROM = {
+				compliance > 90
+				resistance < 10
+			}	
+		}
+
+		days_remove = 120
+
+		days_re_enable = 10
+		
+		cancel_trigger = {
+			FROM = {
+				NOT = { is_owned_by = ROOT }
+			}	
+		}
+
+		cost = 100
+
+		complete_effect = {
+		}
+
+		modifier = {
+			political_power_gain = -0.2
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}	
 		}
 	}
 }
@@ -1310,150 +1587,6 @@ operations = {
 					is_in_faction_with = GER
 				}
 				has_war_with = USA
-			}
-		}
-	}
-}
-
-special_projects = {
-
-	rebuild_suez_canal = {
-
-		icon = GFX_decision_generic_special_project
-
-		available = {
-			has_full_control_of_state = 446
-			has_full_control_of_state = 453
-			num_of_civilian_factories > 15
-		}
-	
-		visible = {
-			has_global_flag = SUEZ_CANAL_BLOCKED
-		}
-	
-		fire_only_once = no
-	
-		days_remove = 365
-	
-		cost = 120
-	
-		modifier = {
-			civilian_factory_use = 15
-		}
-	
-		remove_effect = {
-			if = {
-				limit = {
-					has_full_control_of_state = 446
-					has_full_control_of_state = 453
-				}
-				set_country_flag = rebuilt_suez
-				clr_global_flag = SUEZ_CANAL_BLOCKED
-				country_event = { id = wtt_news.42 hours = 6}
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0 # Don't bother if your navy is weak AND not ENG
-				has_navy_size = { size < 100 }
-				NOT = { tag = ENG }
-			}
-			modifier = {
-				factor = 200 # Prioritize if Italy is being invaded and you can't get to the battlefront (no control of Gibraltar strait)
-				NOT = {
-					OR = {
-						has_full_control_of_state = 118
-						any_allied_country = {
-							has_full_control_of_state = 118
-						}
-					}
-				}
-				has_war_with = ITA
-				ITA = { surrender_progress > 0.1 }
-				has_full_control_of_state = 447
-				has_full_control_of_state = 454
-				has_full_control_of_state = 452
-				has_full_control_of_state = 456
-				has_full_control_of_state = 457
-				NOT = { has_country_flag = blew_up_suez }
-			}
-			modifier = {
-				factor = 200 # Prioritize if UK
-				tag = ENG
-			}
-			modifier = {
-				factor = 10 # Prioritize if not at war
-				has_war = no
-			}
-		}
-	}
-
-	rebuild_panama_canal = {
-
-		icon = GFX_decision_generic_special_project
-
-		available = {
-			has_full_control_of_state = 685
-			NOT = {
-				any_enemy_country = {
-					controls_state = 304
-				}
-			}
-			num_of_civilian_factories > 25
-		}
-	
-		visible = {
-			has_global_flag = PANAMA_CANAL_BLOCKED
-		}
-	
-		fire_only_once = no
-	
-		days_remove = 180
-	
-		cost = 400
-	
-		modifier = {
-			civilian_factory_use = 25
-		}
-	
-		remove_effect = {
-			if = {
-				limit = {
-					has_full_control_of_state = 685
-					NOT = {
-						any_enemy_country = {
-							controls_state = 304
-						}
-					}
-				}
-				set_country_flag = rebuilt_panama
-				clr_global_flag = PANAMA_CANAL_BLOCKED
-				country_event = { id = wtt_news.43 hours = 6 }
-			}
-		}
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0 # Don't bother if your navy is weak AND not USA
-				has_navy_size = { size < 50 }
-				NOT = { tag = USA }
-				has_war = yes
-			}
-			modifier = {
-				factor = 200 # Prioritize if you decisively beat USA's navy
-				has_war_with = USA
-				USA = { has_navy_size = { size < 50 } }
-				has_navy_size = { size > 100 }
-			}
-			modifier = {
-				factor = 200 # Prioritize if USA
-				tag = USA
-			}
-			modifier = {
-				factor = 10 # Prioritize if not at war
-				has_war = no
 			}
 		}
 	}
