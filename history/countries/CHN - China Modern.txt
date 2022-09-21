@@ -9,6 +9,9 @@ set_technology = {
 
 set_convoys = 20
 
+set_stability = 0.40
+set_war_support = 0.68
+
 set_politics = {
 	ruling_party = communism
 	last_election = "2013.1.1"
@@ -37,4 +40,7 @@ add_ideas = {
 	low_economic_mobilisation
 	export_focus
 	volunteer_only
+	CHN_wealth_of_nation
 }
+add_offsite_building = { level = 5 type = industrial_complex }
+add_offsite_building = { level = 10 type = arms_factory }

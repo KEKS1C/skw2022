@@ -1,0 +1,27 @@
+spriteTypes = {	
+	
+	spriteType = {
+		name = "GFX_idea_total_economic_sanctions"
+		texturefile = "gfx/interface/ideas/total_economic_sanctions.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_RUS_resource_wealth_of_motherland"
+		texturefile = "gfx/interface/ideas/RUS_resource_wealth_of_motherland.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_RUS_supply_far_eastern_military_district"
+		texturefile = "gfx/interface/ideas/RUS_supply_far_eastern_military_district.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_CHN_wealth_of_nation"
+		texturefile = "gfx/interface/ideas/CHN_wealth_of_nation.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_reorientation_of_economy_to_east"
+		texturefile = "gfx/interface/ideas/reorientation_of_economy_to_east.dds"
+	}
+}

@@ -12,15 +12,18 @@ set_convoys = 20
 set_politics = {
 	ruling_party = neutrality
 	last_election = "2018.1.1"
-	election_frequency = 48
+	election_frequency = 30
 	elections_allowed = yes
 }
 set_popularities = {
 	democratic = 19
-	fascism = 3
-	communism = 15
-	neutrality = 63
+	fascism = 4
+	communism = 12
+	neutrality = 65
 }
+
+set_stability = 0.6
+set_war_support = 0.38
 
 create_country_leader = {
 	name = "Vladimir Putin"
@@ -37,4 +40,10 @@ add_ideas = {
 	low_economic_mobilisation
 	export_focus
 	limited_conscription
+	total_economic_sanctions
+	RUS_resource_wealth_of_motherland
+	RUS_supply_far_eastern_military_district
+	reorientation_of_economy_to_east
 }
+add_offsite_building = { level = 5 type = industrial_complex }
+add_offsite_building = { level = 15 type = arms_factory }

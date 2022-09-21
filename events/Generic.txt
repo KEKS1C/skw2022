@@ -8,7 +8,7 @@ country_event = {
 	id = generic.1
 	title = generic.1.t
 	desc = generic.1.d
-	picture = GFX_news_event_005
+	picture = GFX_WPK_the_war
 
 	is_triggered_only = yes
 
@@ -21,7 +21,7 @@ country_event = {
 	id = generic.2
 	title = generic.2.t
 	desc = generic.2.d
-	picture = GFX_news_event_005
+	picture = GFX_ROK_the_war
 
 	is_triggered_only = yes
 

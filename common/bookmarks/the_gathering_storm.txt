@@ -2,7 +2,7 @@ bookmarks = {
 	bookmark = {
 		name = "GATHERING_STORM_NAME"
 		desc = "GATHERING_STORM_DESC"
-		date = 2022.1.1.12
+		date = 2022.4.12.12
 		picture = "GFX_select_date_1936"
 		default_country = "ROK"
 		default = yes
@@ -23,7 +23,7 @@ bookmarks = {
 			ideology = communism
 			ideas = {
 			war_on_the_horizon_WPK
-			WPK_total_economic_sanctions
+			total_economic_sanctions
 			}
 			focuses = {
 			
@@ -34,6 +34,9 @@ bookmarks = {
 			history = "OTHER_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
+			RUS_resource_wealth_of_motherland
+			RUS_supply_far_eastern_military_district
+			reorientation_of_economy_to_east
 			}
 			focuses = {
 			
@@ -44,6 +47,7 @@ bookmarks = {
 			history = "OTHER_GATHERING_STORM_DESC"
 			ideology = communism
 			ideas = {
+			CHN_wealth_of_nation
 			}
 			focuses = {
 			

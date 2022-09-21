@@ -1,0 +1,12 @@
+spriteTypes = {
+	
+	spriteType = {
+		name = "GFX_WPK_the_war"
+		texturefile = "gfx/event_pictures/WPK_the_war.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_ROK_the_war"
+		texturefile = "gfx/event_pictures/ROK_the_war.dds"
+	}
+}

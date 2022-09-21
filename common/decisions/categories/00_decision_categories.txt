@@ -26,6 +26,20 @@ MTG_naval_treaties = {
 		}
 	}
 }
+intervention_in_korean_war = {
+	picture = GFX_decision_category_military_operation
+	allowed = {
+		OR = {
+			tag = CHN
+			tag = JPN
+		}
+	}
+	visible = {
+		ROK = {
+			has_war_with = WPK
+		}	
+	}
+}
 skw_war_start = {
 	picture = GFX_decision_category_military_operation
 	allowed = {
@@ -50,11 +64,36 @@ integration_of_the_north = {
 		}
 	}
 	on_map_area = {
-		name = KOR_reintegration
+		name = KOR_reintegration_n
 		zoom = 100
 		
-		target_root_trigger = {
-			always = yes
+		target_trigger = {
+			FROM = { 
+				is_controlled_by = ROOT
+			}
+		}
+	}
+	visible_when_empty = yes
+}
+integration_of_the_south = {
+	picture = GFX_decision_cat_generic_korea
+	allowed = {
+		tag = WPK
+	}
+	visible = {
+		any_controlled_state = {
+			is_core_of = ROK
+			NOT = { is_core_of = ROOT }
+		}
+	}
+	on_map_area = {
+		name = KOR_reintegration_s
+		zoom = 100
+		
+		target_trigger = {
+			FROM = { 
+				is_controlled_by = ROOT
+			}
 		}
 	}
 	visible_when_empty = yes

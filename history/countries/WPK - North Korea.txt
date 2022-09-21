@@ -9,6 +9,9 @@ set_technology = {
 
 set_convoys = 20
 
+set_stability = 0.32
+set_war_support = 0.97
+
 set_politics = {
 	ruling_party = communism
 	last_election = "2012.1.1"
@@ -37,5 +40,5 @@ add_ideas = {
 	closed_economy
 	service_by_requirement
 	war_on_the_horizon_WPK
-	WPK_total_economic_sanctions
+	total_economic_sanctions
 }

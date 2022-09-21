@@ -18,17 +18,39 @@ ideas = {
 			}
 		}
 		
-		WPK_total_economic_sanctions = {
+		total_economic_sanctions = {
 			
 			allowed = {
 				always = yes
 			}
 			removal_cost = -1
 			
-			picture = trade
+			picture = GFX_idea_WPK_total_economic_sanctions
 			
 			modifier = {
-				min_export = -0.5
+				stability_factor = -0.1
+				min_export = -0.4
+				consumer_goods_factor = 0.1
+				ndustrial_capacity_factory = -0.1
+				production_factory_efficiency_gain_factor = -0.4
+				production_factory_max_efficiency_factor = 0.1
+			}
+		}
+		
+		reorientation_of_economy_to_east = {
+			
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = reorientation_of_economy_to_east
+			
+			modifier = {
+				stability_factor = 0.05
+				min_export = 0.25
+				consumer_goods_factor = -0.03
+				political_power_factor = -0.5
 			}
 		}
 		
@@ -45,6 +67,64 @@ ideas = {
 				stability_weekly = -0.075
 				political_power_factor = -0.1
 				war_support_weekly = 0.03
+			}
+		}
+		
+		RUS_resource_wealth_of_motherland = {
+			
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = RUS_resource_wealth_of_motherland
+			
+			modifier = {
+				custom_modifier_tooltip = RUS_off_map_resources
+			}
+		}
+		
+		RUS_supply_far_eastern_military_district = {
+			
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = RUS_supply_far_eastern_military_district
+			
+			modifier = {
+				custom_modifier_tooltip = 15_mil_factories_5_factories
+			}
+		}
+		
+		CHN_wealth_of_nation = {
+			
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = GFX_idea_CHN_wealth_of_nation
+			
+			modifier = {
+				custom_modifier_tooltip = CHN_off_map_resources
+			}
+		}
+		
+		military_volunteers = {
+			
+			allowed = {
+				always = yes
+			}
+			removal_cost = -1
+			
+			picture = GFX_idea_mex_politicised_army
+			
+			modifier = {
+				send_volunteer_size = 5
+				send_volunteers_tension = -0.75
+				send_volunteer_divisions_required = -10
 			}
 		}
 		

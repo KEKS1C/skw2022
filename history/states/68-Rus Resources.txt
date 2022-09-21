@@ -1,0 +1,28 @@
+
+state={
+	id=68
+	name="STATE_68"
+	resources={
+		oil = 207
+		aluminium = 118
+		rubber = 12
+		tungsten = 31
+		steel = 175
+		chromium = 132
+    }
+	provinces={
+		17723
+	}
+    
+	impassable = yes
+	
+    history={
+		buildings = {
+		}
+		owner = RUS
+		add_core_of = RUS
+	}  
+    
+	manpower=1
+	state_category=enclave
+}

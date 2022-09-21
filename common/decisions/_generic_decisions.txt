@@ -274,7 +274,7 @@ skw_war_start = {
 	}
 }
 integration_of_the_north = {
-	reinforce_garrison = {
+	ROK_reinforce_garrison = {
 
         state_target = yes
 		on_map_mode = map_and_decisions_view  
@@ -336,7 +336,7 @@ integration_of_the_north = {
 			}	
 		}
 	}
-	carry_out_anti_guerrilla_operation = {
+	ROK_carry_out_anti_guerrilla_operation = {
 
         state_target = yes
 		on_map_mode = map_and_decisions_view  
@@ -423,6 +423,79 @@ integration_of_the_north = {
 			army_experience = 10
 		}
 	}
+	conduct_demonstrative_trials_communist_officials = {
+
+        state_target = yes
+		on_map_mode = map_and_decisions_view  
+        target_trigger = {
+            FROM = {
+				is_controlled_by = ROOT
+				is_core_of = WPK
+				NOT = { is_core_of = ROOT }
+            }
+        }
+		priority = 50
+
+		icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 1
+				has_political_power > 50
+			}
+			modifier = {
+				factor = 10
+				has_political_power > 250
+			}
+			modifier = {
+				factor = 10
+				has_political_power > 400
+			}
+		}
+
+		available = {
+			FROM = {
+				compliance < 60
+			}	
+		}
+
+		days_remove = 50
+
+		days_re_enable = 90
+		
+		cancel_trigger = {
+			FROM = {
+				NOT = { is_owned_by = ROOT }
+			}	
+		}
+
+		cost = 50
+
+		complete_effect = {
+		}
+
+		modifier = {
+			political_power_gain = -0.25
+			communism_drift = -0.02
+		}
+
+		remove_effect = {
+			FROM = {
+				set_temp_variable = {
+					var = executed_officials
+					value = state_population_k
+				}
+				multiply_temp_variable = {
+					var = executed_officials
+					value = 0.001
+				}
+				add_manpower = executed_officials
+				add_compliance = 15
+				add_resistance = -10
+			}
+		}
+	}
 	start_pro_democracy_campaign = {
 
         state_target = yes
@@ -462,7 +535,7 @@ integration_of_the_north = {
 
 		days_remove = 60
 
-		days_re_enable = 90
+		days_re_enable = 100
 		
 		cancel_trigger = {
 			FROM = {
@@ -486,7 +559,7 @@ integration_of_the_north = {
 			}
 		}
 	}
-	integrate_the_state = {
+	ROK_integrate_the_state = {
 
         state_target = yes
 		on_map_mode = map_and_decisions_view  
@@ -550,6 +623,479 @@ integration_of_the_north = {
 		}
 	}
 }
+integration_of_the_south = {
+	WPK_reinforce_garrison = {
+
+        state_target = yes
+		on_map_mode = map_and_decisions_view  
+        target_trigger = {
+            FROM = {
+				is_controlled_by = ROOT
+				is_core_of = ROK
+				NOT = { is_core_of = ROOT }
+            }
+        }
+		priority = 50
+
+		icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 1
+				has_political_power > 50
+			}
+			modifier = {
+				factor = 10
+				has_political_power > 250
+			}
+			modifier = {
+				factor = 10
+				has_political_power > 400
+			}
+		}
+
+		available = {
+			has_manpower > 10000	
+		}
+
+		days_remove = 30
+
+		days_re_enable = 60
+		
+		cancel_trigger = {
+			FROM = {
+				NOT = { is_owned_by = ROOT }
+			}	
+		}
+
+		cost = 50
+
+		complete_effect = {
+			add_manpower = -2000
+		}
+
+		modifier = {
+			weekly_manpower = -2000
+		}
+
+		remove_effect = {
+			FROM = {
+				add_compliance = 10
+				add_resistance = -10
+			}	
+		}
+	}
+	WPK_carry_out_anti_bandit_operation = {
+
+        state_target = yes
+		on_map_mode = map_and_decisions_view  
+        target_trigger = {
+            FROM = {
+				is_controlled_by = ROOT
+				is_core_of = ROK
+				NOT = { is_core_of = ROOT }
+            }
+        }
+		priority = 50
+
+		icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 1
+				command_power > 40
+			}
+			modifier = {
+				factor = 10
+				command_power > 60
+			}
+			modifier = {
+				factor = 10
+				command_power > 100
+			}
+		}
+
+		available = {
+			command_power > 30
+			has_manpower > 1000
+		}
+
+		days_remove = 50
+
+		days_re_enable = 70
+		
+		cancel_trigger = {
+			FROM = {
+				NOT = { is_owned_by = ROOT }
+			}	
+		}
+
+		custom_cost_trigger = {
+			command_power > 29
+		}
+		
+		custom_cost_text = KOR_decision_cost
+
+		complete_effect = {
+			add_command_power = -30
+		}
+
+		modifier = {
+			FROM = {
+				resistance_target = -0.2
+			}
+		}
+
+		remove_effect = {
+			FROM = {
+				add_compliance = -5
+				add_resistance = -25
+			}
+			random_list = {
+				10 = {
+					add_manpower = -50
+				}
+				15 = {
+					add_manpower = -150
+				}
+				25 = {
+					add_manpower = -300
+				}
+				15 = {
+					add_manpower = -500
+				}
+				10 = {
+					add_manpower = -750
+				}
+			}
+			army_experience = 10
+		}
+	}
+	start_red_terror_against_the_fascists_and_their_accomplices = {
+
+        state_target = yes
+		on_map_mode = map_and_decisions_view  
+        target_trigger = {
+            FROM = {
+				is_controlled_by = ROOT
+				is_core_of = ROK
+				NOT = { is_core_of = ROOT }
+            }
+        }
+		priority = 50
+
+		icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 1
+				has_political_power > 50
+			}
+			modifier = {
+				factor = 10
+				has_political_power > 250
+			}
+			modifier = {
+				factor = 10
+				has_political_power > 400
+			}
+		}
+
+		available = {
+			FROM = {
+				compliance < 60
+			}	
+		}
+
+		days_remove = 50
+
+		days_re_enable = 90
+		
+		cancel_trigger = {
+			FROM = {
+				NOT = { is_owned_by = ROOT }
+			}	
+		}
+
+		cost = 50
+
+		complete_effect = {
+		}
+
+		modifier = {
+			political_power_gain = -0.10
+			democratic_drift = -0.02
+		}
+
+		remove_effect = {
+			FROM = {
+				set_temp_variable = {
+					var = executed_fascists
+					value = state_population_k
+				}
+				multiply_temp_variable = {
+					var = executed_fascists
+					value = 0.005
+				}
+				add_manpower = executed_fascists
+				add_compliance = 10
+				add_resistance = -15
+			}
+		}
+	}
+	start_pro_communist_propaganda = {
+
+        state_target = yes
+		on_map_mode = map_and_decisions_view  
+        target_trigger = {
+            FROM = {
+				is_controlled_by = ROOT
+				is_core_of = ROK
+				NOT = { is_core_of = ROOT }
+            }
+        }
+		priority = 50
+
+		icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 1
+				has_political_power > 50
+			}
+			modifier = {
+				factor = 10
+				has_political_power > 250
+			}
+			modifier = {
+				factor = 10
+				has_political_power > 400
+			}
+		}
+
+		available = {
+			FROM = {
+				resistance < 60
+			}	
+		}
+
+		days_remove = 75
+
+		days_re_enable = 90
+		
+		cancel_trigger = {
+			FROM = {
+				NOT = { is_owned_by = ROOT }
+			}	
+		}
+
+		cost = 75
+
+		complete_effect = {
+		}
+
+		modifier = {
+			political_power_gain = -0.1
+			democratic_drift = -0.01
+		}
+
+		remove_effect = {
+			FROM = {
+				add_compliance = 15
+				add_resistance = -5
+			}
+		}
+	}
+	WPK_integrate_the_state = {
+
+        state_target = yes
+		on_map_mode = map_and_decisions_view  
+        target_trigger = {
+            FROM = {
+				is_controlled_by = ROOT
+				is_core_of = ROK
+				NOT = { is_core_of = ROOT }
+            }
+        }
+		priority = 50
+
+		icon = GFX_decision_generic_form_nation
+
+		ai_will_do = {
+			base = 1
+			modifier = {
+				add = 1
+				has_political_power > 75
+			}
+			modifier = {
+				factor = 10
+				has_political_power > 350
+			}
+			modifier = {
+				factor = 10
+				has_political_power > 500
+			}
+		}
+
+		available = {
+			FROM = {
+				compliance > 90
+				resistance < 10
+			}	
+		}
+
+		days_remove = 120
+
+		days_re_enable = 10
+		
+		cancel_trigger = {
+			FROM = {
+				NOT = { is_owned_by = ROOT }
+			}	
+		}
+
+		cost = 100
+
+		complete_effect = {
+		}
+
+		modifier = {
+			political_power_gain = -0.25
+		}
+
+		remove_effect = {
+			FROM = {
+				add_core_of = ROOT
+			}	
+		}
+	}
+}
+intervention_in_korean_war = {
+
+	CHN_intervention = {
+
+		icon = generic_construction
+		
+		fire_only_once = yes
+
+		allowed = {
+			tag = CHN
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		available = {
+			ROK = {
+				controls_state = 32
+			}
+		}
+		
+		ai_will_do = {
+			base = 100
+		}
+
+		complete_effect = {
+			create_faction = WPK_CHN_ALLIANCE
+			add_to_faction = WPK
+			declare_war_on = {
+				target = ROK
+				type = topple_government
+			}
+		}
+	}
+	CHN_volunteers = {
+
+		icon = generic_construction
+
+		allowed = {
+			tag = CHN
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		available = {
+			WPK = {
+				casualties_k > 30
+			}
+		}
+		
+		ai_will_do = {
+			base = 5
+		}
+
+		complete_effect = {
+			add_ideas = {
+				military_volunteers
+			}	
+		}
+	}
+	JPN_intervention = {
+
+		icon = generic_construction
+		
+		fire_only_once = yes
+
+		allowed = {
+			tag = JPN
+		}
+
+		cost = 100
+		fire_only_once = yes
+
+		available = {
+			WPK = {
+				controls_state = 25
+			}
+		}
+		
+		ai_will_do = {
+			base = 100
+		}
+
+		complete_effect = {
+			create_faction = ROK_JPN_ALLIANCE
+			add_to_faction = ROK
+			declare_war_on = {
+				target = WPK
+				type = topple_government
+			}
+		}
+	}
+	
+	JPN_volunteers = {
+
+		icon = generic_construction
+
+		allowed = {
+			tag = JPN
+		}
+
+		cost = 50
+		fire_only_once = yes
+
+		available = {
+			ROK = {
+				casualties_k > 30
+			}
+		}
+		
+		ai_will_do = {
+			base = 5
+		}
+
+		complete_effect = {
+			add_ideas = {
+				military_volunteers
+			}	
+		}
+	}
+}	
 economy_decisions = {
 
 	dismantle_maginot = {
